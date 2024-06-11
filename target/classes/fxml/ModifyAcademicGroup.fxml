@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="652.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.ModifyAcademicGroupController">
+   <children>
+      <TableView fx:id="tableViewMembers" layoutX="312.0" layoutY="115.0" onMouseClicked="#selectedRow" prefHeight="265.0" prefWidth="325.0">
+        <columns>
+          <TableColumn fx:id="columnMemberRol" prefWidth="120.0" text="Rol" />
+          <TableColumn fx:id="columnMemberName" prefWidth="236.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="201.0" text="Nombre:" textFill="#141414">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="252.0" text="Rol:" textFill="#1b1b1b">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxMemberName" layoutX="109.0" layoutY="197.0" prefHeight="25.0" prefWidth="164.0" />
+      <ChoiceBox fx:id="comboBoxMemberRole" layoutX="109.0" layoutY="248.0" prefHeight="25.0" prefWidth="164.0" />
+      <Button fx:id="btnModifyMemberAcademicBody" layoutX="16.0" layoutY="346.0" mnemonicParsing="false" onAction="#modifyAcademicGroupMemberOnAction" style="-fx-background-color: fab237;" text="Modificar" textFill="#181819">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDeleteMenberAcademicBody" layoutX="116.0" layoutY="346.0" mnemonicParsing="false" onAction="#deleteMemberAcademicGroupOnAction" style="-fx-background-color: fab237;" text="Eliminar" textFill="#1d1d1d">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnaddmember" layoutX="217.0" layoutY="346.0" mnemonicParsing="false" onAction="#addMemberOnAction" style="-fx-background-color: fab237;" text="Agregar" textFill="#0f0f10">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#1a1b1b" layoutX="26.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleciona un maestro para poder eliminar o modificar" textAlignment="CENTER" wrappingWidth="255.13671875">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="36.0" stroke="#0d0d0d" strokeType="INSIDE" width="652.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="10.0" layoutY="27.0" stroke="#004aad" strokeType="INSIDE" width="652.0" />
+      <Label layoutX="17.0" layoutY="44.0" text="SGPGyER" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewExit" fitHeight="33.0" fitWidth="26.0" layoutX="625.0" layoutY="1.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="541.0" layoutY="48.0" text="Administrador" textFill="#eff3f4">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

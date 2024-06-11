@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="503.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.RegisterReceptionalWorkController">
+   <children>
+      <Text fill="#1c1c1d" layoutX="153.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Trabajo Recepcional">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="82.0" layoutY="72.0" text="Nombre de TR:" textFill="#1d1d1d">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="101.0" text="Anteproyecto:" textFill="#1a1a1b">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="136.0" text="Sinodal:" textFill="#0d0d0d">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="170.0" text="Fecha de Inicio:" textFill="#161616">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldReceptionalWorkName" layoutX="182.0" layoutY="67.0" prefHeight="25.0" prefWidth="216.0" />
+      <DatePicker fx:id="datePickerDateStart" editable="false" layoutX="183.0" layoutY="165.0" prefHeight="25.0" prefWidth="216.0" />
+      <ComboBox fx:id="comboBoxPreliminaryProject" layoutX="183.0" layoutY="96.0" prefHeight="25.0" prefWidth="216.0" />
+      <ComboBox fx:id="comboBoxSynodal" layoutX="183.0" layoutY="131.0" prefHeight="25.0" prefWidth="216.0" />
+      <Button fx:id="btnRegisterReceptionalWork" layoutX="206.0" layoutY="207.0" mnemonicParsing="false" onAction="#registerReceptionalWorkOnAction" style="-fx-background-color: f1cb00;" text="Registrar" textFill="#042b50">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 5.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubreportCodirector2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68fed2d8-24e4-4a9c-bbb9-5547c40d975d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="proyecto"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="anteproyecto" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT a.`Nombre_An`,
+	u.`Nombre`,
+	COUNT( av.num_avance) AS Total_Avances_Entregados,
+	GROUP_CONCAT( av.titulo) AS Lista_Avances
+FROM proyecto.anteproyecto a
+	INNER JOIN proyecto.estudiante e ON 
+	 e.`ID_anteproyecto` = a.`ID_Anteproyecto` 
+	INNER JOIN proyecto.usuario u ON 
+	 u.correo = e.correo 
+	LEFT JOIN proyecto.estudianteavance ea ON 
+	 ea.`Matricula_estudiante` = e.`Matricula` 
+	LEFT JOIN proyecto.avance av ON 
+	 av.num_avance = ea.numero_avance 
+WHERE 
+	 a.`Nombre_An` = $P{anteproyecto} 
+GROUP BY a.`Nombre_An`,
+	u.`Nombre`]]>
+	</queryString>
+	<field name="Nombre_An" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+	</field>
+	<field name="Total_Avances_Entregados" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="Total_Avances_Entregados"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total_Avances_Entregados"/>
+	</field>
+	<field name="Lista_Avances" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Lista_Avances"/>
+		<property name="com.jaspersoft.studio.field.label" value="Lista_Avances"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40">
+			<textField>
+				<reportElement x="0" y="0" width="280" height="30" uuid="932e625d-1241-4a33-89b1-69646bb10e69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Anteproyecto: " + $F{Nombre_An}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="30" width="760" height="10" backcolor="#006699" uuid="82bc1c31-1998-4887-a170-28fced3d4ba7"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="82" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="180" height="30" uuid="1a75ca40-b622-4557-821c-618f6532731c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88701eba-9e85-4187-a9f1-7f5e2bb8ed5e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="30" width="180" height="30" uuid="e88f3abe-5074-47e9-a48e-bcd45ba8bf07">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5caca1ab-a66e-4346-9e19-0e3dbfbe77fe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total de avances: " + $F{Total_Avances_Entregados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="30" width="400" height="30" uuid="ad172b3f-3af9-4e35-b37b-844821115727">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61b4ad82-e5b4-4f61-8346-bcc05ef6dcc8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Lista_Avances}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="80" width="760" height="2" backcolor="#006699" uuid="f1cfb5bc-789e-4ec9-934b-40f6c688d214"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="760" height="2" backcolor="#006699" uuid="6ebdce0b-6ae2-446d-a946-21dae93be111"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>

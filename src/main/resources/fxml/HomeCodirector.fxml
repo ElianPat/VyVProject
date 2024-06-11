@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.HomeCodirectorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="36.0" stroke="#0d0d0d" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="10.0" layoutY="26.0" stroke="#004aad" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="24.0" layoutY="53.0" text="SGPGyER" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelName" layoutX="501.0" layoutY="56.0" prefHeight="17.0" prefWidth="72.0" text="Label" textFill="#f8f7f7">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMakeReport" layoutX="435.0" layoutY="316.0" mnemonicParsing="false" onAction="#generateReportOnAction" style="-fx-background-color: #f1cb00;" text="Crear reporte">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconReport.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="tableViewStudentPreliminaryProject" layoutX="60.0" layoutY="126.0" onMouseClicked="#selectedRow" prefHeight="200.0" prefWidth="337.0">
+        <columns>
+          <TableColumn fx:id="columnStudentName" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="columnStudentEnrollment" prefWidth="75.0" text="Matricula" />
+            <TableColumn fx:id="columnPreliminaryProjectName" prefWidth="100.0" text="Anteproyecto" />
+            <TableColumn fx:id="columnEducativeExperienceName" prefWidth="85.33333333333331" text="Experiencia E. " />
+        </columns>
+      </TableView>
+      <ImageView fx:id="btnBack" fitHeight="24.0" fitWidth="34.0" layoutX="561.0" layoutY="2.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="90.0" text="Filtrar por nombre de anteproyecto:" textFill="#1a1a1b">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldName" layoutX="268.0" layoutY="85.0" onKeyReleased="#filterName" />
+   </children>
+</AnchorPane>

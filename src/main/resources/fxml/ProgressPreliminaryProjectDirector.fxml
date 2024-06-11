@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="258.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.ProgressPreliminaryProjectDirectorController">
+   <children>
+      <TableView fx:id="tableViewStudentPreliminaryProject" layoutX="183.0" layoutY="47.0" onMouseClicked="#selectedRow" prefHeight="163.0" prefWidth="394.0">
+         <columns>
+            <TableColumn fx:id="columnStudentEnrollment" prefWidth="74.66665649414062" text="Matricula" />
+            <TableColumn fx:id="columnStudentName" prefWidth="126.0" text="Nombre" />
+            <TableColumn fx:id="columnPreliminaryProjectName" prefWidth="187.33331298828125" text="Anteproyecto" />
+         </columns>
+      </TableView>
+      <Label layoutX="183.0" layoutY="14.0" text="Lista de alumnos con anteproyecto asignado">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxPreliminaryProject" layoutX="14.0" layoutY="47.0" onAction="#setPreliminaryProjectOnAction" prefWidth="150.0" promptText="Anteproyectos" />
+   </children>
+</AnchorPane>

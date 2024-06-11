@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="487.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.RegisterAcademicGroupController">
+   <children>
+      <Label layoutX="146.0" layoutY="14.0" text="Registro de cuerpo Academico" textFill="#141414">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="52.0" text="Clave:" textFill="#1a1a1b">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldKeyAcademicGroup" layoutX="153.0" layoutY="47.0" prefHeight="25.0" prefWidth="227.0" />
+      <Label layoutX="61.0" layoutY="81.0" prefHeight="17.0" prefWidth="81.0" text="Nombre CA: " textFill="#141414">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldNameAcademicGroup" layoutX="153.0" layoutY="81.0" prefHeight="25.0" prefWidth="227.0" />
+      <Button fx:id="buttonRegisterAcademicGroup" layoutX="213.0" layoutY="117.0" mnemonicParsing="false" onAction="#registerAcademicGroupOnAction" style="-fx-background-color: f1cb00;" text="Registrar" textFill="#1b1b1b">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="6.0" layoutX="-3.0" layoutY="154.0" stroke="TRANSPARENT" strokeType="INSIDE" width="494.0" />
+      <Pane fx:id="paneAddMember" layoutX="-3.0" layoutY="168.0" prefHeight="85.0" prefWidth="494.0">
+         <children>
+            <Label layoutX="39.0" layoutY="18.0" text="Rol:" textFill="#181819">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="231.0" layoutY="18.0" text="Profesor:" textFill="#161616">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxProfessor" layoutX="302.0" layoutY="6.0" prefWidth="150.0" />
+            <Button fx:id="buttonAddMember" layoutX="187.0" layoutY="50.0" mnemonicParsing="false" onAction="#addMemberOnAction" style="-fx-background-color: f1cb00;" text="Agregar miembro" textFill="#1e1f1f">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ChoiceBox fx:id="choiceBoxRole" layoutX="75.0" layoutY="6.0" prefHeight="25.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

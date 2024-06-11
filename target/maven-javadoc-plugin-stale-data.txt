@@ -1,0 +1,137 @@
+@options
+@argfile
+--class-path
+'C:/Users/alexs/.m2/repository/org/openjfx/javafx-controls/17.0.7/javafx-controls-17.0.7.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-graphics/17.0.7/javafx-graphics-17.0.7.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-fxml/17.0.7/javafx-fxml-17.0.7.jar;C:/Users/alexs/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar;C:/Users/alexs/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar;C:/Users/alexs/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar;C:/Users/alexs/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar;C:/Users/alexs/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar;C:/Users/alexs/.m2/repository/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar;C:/Users/alexs/.m2/repository/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar;C:/Users/alexs/.m2/repository/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar;C:/Users/alexs/.m2/repository/org/eclipse/jdt/ecj/3.21.0/ecj-3.21.0.jar;C:/Users/alexs/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.jar;C:/Users/alexs/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.jar;C:/Users/alexs/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar;C:/Users/alexs/.m2/repository/org/apache/pdfbox/fontbox/2.0.27/fontbox-2.0.27.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-base/22-ea+16/javafx-base-22-ea+16.jar'
+--module-path
+'C:/Users/alexs/.m2/repository/org/openjfx/javafx-fxml/17.0.7/javafx-fxml-17.0.7-win.jar;C:/Users/alexs/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar;C:/Users/alexs/.m2/repository/net/sf/jasperreports/jasperreports-fonts/6.16.0/jasperreports-fonts-6.16.0.jar;C:/Users/alexs/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-graphics/17.0.7/javafx-graphics-17.0.7-win.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-base/22-ea+16/javafx-base-22-ea+16-win.jar;C:/Users/alexs/.m2/repository/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar;C:/Users/alexs/.m2/repository/net/sf/jasperreports/jasperreports/6.16.0/jasperreports-6.16.0.jar;C:/Users/alexs/.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar;C:/Users/alexs/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar;C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/target/SGPGyER-1.0-SNAPSHOT.jar;C:/Users/alexs/.m2/repository/org/apache/pdfbox/pdfbox/2.0.27/pdfbox-2.0.27.jar;C:/Users/alexs/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar;C:/Users/alexs/.m2/repository/org/openjfx/javafx-controls/17.0.7/javafx-controls-17.0.7-win.jar;C:/Users/alexs/.m2/repository/com/mysql/mysql-connector-j/8.0.32/mysql-connector-j-8.0.32.jar;C:/Users/alexs/.m2/repository/com/lowagie/itext/2.1.7/itext-2.1.7.jar;C:/Users/alexs/.m2/repository/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar'
+--patch-module
+com.mycompany.sgpgyer='C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java;C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+--module-source-path
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'SGPGyER 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'SGPGyER 1.0-SNAPSHOT API'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/module-info.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/dataaccess/DataBaseManager.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/AdminReportController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/App.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/AssignPreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/CodirectorReportController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/DeliverAdvanceController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/DialogGenerator.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/DirectorReportController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/DocumentCell.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/EvaluatePreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/FeedbackStudentController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeAcademicGroupController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeAdministratorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeCodirectorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeDirectorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeProfessorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/HomeStudentController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/LoginController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/MainInterfaceController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyAcademicGroupController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyAdvanceController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyCourseController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyPreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyProfessorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyReceptionalWorkController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ModifyRegisterPreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ProfessorReportController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ProgressPreliminaryProjectDirectorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterAcademicGroupController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterCourseController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterEducativeExperienceController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterPreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterProfessorController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterReceptionalWorkController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/RegisterStudentsController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ScheduleAdvanceController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/SendEmailController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ShowAcademicGroupForModifyController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ShowAdvancePreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ShowAvanceStudentsController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/ShowStudentsForModifyController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/gui/controller/TableModifyPreliminaryProjectController.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IAcademicGroup.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IAdvance.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/ICodirector.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/ICourse.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IDirector.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IEducativeExperience.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IPdf.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IPreliminaryProject.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IProfessor.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IReceptionalWork.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IStudent.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/interfaces/IUser.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/AcademicGroup.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/AcademicGroupDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Advance.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/AdvanceDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/ClassHolder.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Codirector.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/CodirectorDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Course.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/CourseDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/DAOException.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Director.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/DirectorDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Document.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/EducativeExperience.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/EducativeExperienceDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Email.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/GenerateReport.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/GenerateSubreport.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Pdf.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/PdfDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/PreliminaryProject.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/PreliminaryProjectDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Professor.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/ProfessorDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/ReceptionalWork.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/ReceptionalWorkDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Status.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/Student.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/StudentDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/User.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/UserDAO.java'
+'C:/Users/alexs/OneDrive/Escritorio/Tareas UV/Cuarto semestre/Construccion/SGPGyER-vs-final/SGPGyER/src/main/java/mx/uv/fei/logic/UserRole.java'
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\allclasses-index.html = 1707754050323
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\allpackages-index.html = 1707754050327
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\constant-values.html = 1707754049831
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\element-list = 1707754049754
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\help-doc.html = 1707754050420
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\index-all.html = 1707754050411
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\index.html = 1707754050414
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\jquery-ui.overrides.css = 1707754050446
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\member-search-index.js = 1707754050333
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\module-search-index.js = 1707754050328
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\overview-tree.html = 1707754050250
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\package-search-index.js = 1707754050329
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\script.js = 1707754050435
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\search.js = 1707754050437
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\serialized-form.html = 1707754049842
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\stylesheet.css = 1707754050423
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\tag-search-index.js = 1707754050335
+C:\Users\alexs\OneDrive\Escritorio\Tareas UV\Cuarto semestre\Construccion\SGPGyER-vs-final\SGPGyER\target\apidocs\type-search-index.js = 1707754050330

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="529.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.ShowAcademicGroupForModifyController">
+   <children>
+      <TableView fx:id="tableViewAcademicGroup" layoutX="33.0" layoutY="85.0" onMouseClicked="#selectedRow" prefHeight="216.0" prefWidth="463.0" style="-fx-background-color: C6F3FA;">
+        <columns>
+          <TableColumn fx:id="columnAcademicGroupKey" prefWidth="104.0" text="Clave" />
+          <TableColumn fx:id="columnAcademicGroupName" maxWidth="1000.0" prefWidth="365.0" text="Nombre Cuerpo Academico" />
+        </columns>
+      </TableView>
+      <Label layoutX="65.0" layoutY="35.0" text="Selecciona el Cuerpo academico que desees modificar" textFill="#161616">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonModifyAcademicGroup" disable="true" layoutX="218.0" layoutY="320.0" mnemonicParsing="false" onAction="#modifyAcademicGroupOnAction" style="-fx-background-color: #f1cb00;" text="Modificar" textFill="#181919">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

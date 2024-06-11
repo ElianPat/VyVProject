@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.ShowAdvancePreliminaryProjectController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="35.0" stroke="#0d0d0d" strokeType="INSIDE" width="671.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="10.0" layoutY="29.0" stroke="#004aad" strokeType="INSIDE" width="671.0" />
+        <Label layoutX="27.0" layoutY="43.0" text="SGPGyER" textFill="#f1cb00">
+            <font>
+                <Font name="Cambria Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNameDirector" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="557.0" layoutY="47.0" text="name" textFill="#eff3f4">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0" />
+            </font>
+        </Label>
+        <ScrollPane layoutX="3.0" layoutY="69.0" prefHeight="317.0" prefWidth="665.0" style="-fx-background-color: C6F3FA;" vvalue="0.2">
+            <content>
+                <AnchorPane prefHeight="467.0" prefWidth="651.0" style="-fx-background-color: C6F3FA;">
+                    <children>
+                        <ListView fx:id="listViewAdvance" layoutX="44.0" layoutY="84.0" onMouseClicked="#selectedAdvance" prefHeight="300.0" prefWidth="263.0" style="-fx-background-color: C6F3FA;" />
+                        <Text fill="#042b50" layoutX="89.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de avances entregados :">
+                            <font>
+                                <Font name="Cambria Bold" size="13.0" />
+                            </font>
+                        </Text>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="303.0" layoutX="344.0" layoutY="84.0" stroke="#004aad" strokeType="INSIDE" width="254.0" />
+                        <Label fx:id="labelDateStart" layoutX="356.0" layoutY="126.0" prefHeight="21.0" prefWidth="84.0" textFill="#042b50">
+                            <font>
+                                <Font name="Cambria Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelDateFinish" layoutX="495.0" layoutY="126.0" prefHeight="21.0" prefWidth="94.0" textFill="#042b50">
+                            <font>
+                                <Font name="Cambria Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelDescription" layoutX="353.0" layoutY="147.0" prefHeight="104.0" prefWidth="236.0" textFill="#042b50">
+                            <font>
+                                <Font name="Cambria Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <ListView fx:id="listViewEvidence" layoutX="349.0" layoutY="256.0" onMouseClicked="#selectedEvidence" prefHeight="128.0" prefWidth="245.0" />
+                  <Label fx:id="labelState" layoutX="496.0" layoutY="94.0" prefHeight="18.0" prefWidth="91.0" textFill="#042b50">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font></Label>
+                        <Text fill="#042b50" layoutX="412.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detalles del avance:">
+                            <font>
+                                <Font name="Cambria Bold" size="13.0" />
+                            </font>
+                        </Text>
+                        <Pane fx:id="paneMessage" layoutX="348.0" layoutY="256.0" prefHeight="128.0" prefWidth="247.0" style="-fx-background-color: f1cb00;">
+                            <children>
+                                <Text fill="#042b50" layoutX="83.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La entrega carece de archivos adjuntos" wrappingWidth="133.0">
+                                    <font>
+                                        <Font name="Cambria Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                        <Button fx:id="buttonValidate" layoutX="150.0" layoutY="416.0" mnemonicParsing="false" onAction="#validateAdvanceOnAction" style="-fx-background-color: f1cb00;" text="Validar">
+                            <font>
+                                <Font name="Cambria Bold" size="13.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonReject" layoutX="446.0" layoutY="416.0" mnemonicParsing="false" onAction="#rejectAdvanceOnAction" style="-fx-background-color: f1cb00;" text="Rechazar">
+                            <font>
+                                <Font name="Cambria Bold" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <ImageView fx:id="btnExit" fitHeight="24.0" fitWidth="34.0" layoutX="636.0" layoutY="4.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/icons8-cerrar-ventana-48.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+    </children>
+</AnchorPane>

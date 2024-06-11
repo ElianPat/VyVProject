@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.HomeStudentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="9.0" layoutY="28.0" stroke="#004aad" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="36.0" stroke="#0d0d0d" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="24.0" layoutY="32.0" text="SGPGyER" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonCreate" layoutX="78.0" layoutY="382.0" mnemonicParsing="false" onAction="#createOnAction" style="-fx-background-color: #f1cb00;" text="Crear" textFill="#101010">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonModify" disable="true" layoutX="447.0" layoutY="382.0" mnemonicParsing="false" onAction="#modifyAdvanceOnAction" style="-fx-background-color: #f1cb00;" text="Modificar" textFill="#0d0d0d">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonDeliver" disable="true" layoutX="265.0" layoutY="382.0" mnemonicParsing="false" onAction="#deliverAdvanceOnAction" style="-fx-background-color: #f1cb00;" text="Entregar" textFill="#0b0b0b">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableViewAdvance" layoutX="78.0" layoutY="148.0" onMouseClicked="#selectedRow" prefHeight="200.0" prefWidth="445.0">
+        <columns>
+          <TableColumn fx:id="columnAdvanceTitle" prefWidth="236.0" text="Titulo" />
+          <TableColumn fx:id="columnAdvanceDateEnd" prefWidth="115.20001220703125" text="Fecha Fin" />
+            <TableColumn fx:id="columnAdvanceState" prefWidth="96.79998779296875" text="Estado" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelName" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="416.0" layoutY="35.0" text="Label" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="labelEducativeExperience" layoutX="230.0" layoutY="35.0" text="Label" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewExit" fitHeight="24.0" fitWidth="106.0" layoutX="562.0" layoutY="2.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="278.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.RegisterProfessorController">
+   <children>
+      <Label layoutX="60.0" layoutY="66.0" text="Nombre:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="122.0" text="Correo:">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="182.0" text="N. Personal:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="66.0" text="Rol extra:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldName" layoutX="142.0" layoutY="61.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="textFieldEmail" layoutX="142.0" layoutY="117.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="textFieldPersonalNumber" layoutX="142.0" layoutY="177.0" prefHeight="25.0" prefWidth="177.0" />
+      <CheckBox fx:id="checkBoxDirector" layoutX="448.0" layoutY="65.0" mnemonicParsing="false" text="Director" />
+      <CheckBox fx:id="checkBoxCodirector" layoutX="450.0" layoutY="121.0" mnemonicParsing="false" text="Codirector" />
+      <CheckBox fx:id="checkBoxSynodal" layoutX="449.0" layoutY="181.0" mnemonicParsing="false" text="Sinodal" />
+      <Button layoutX="270.0" layoutY="233.0" mnemonicParsing="false" onAction="#registerProfessorOnAction" style="-fx-background-color: #f1cb00;" text="Registrar">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="213.0" layoutY="14.0" text="Datos del profesor">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

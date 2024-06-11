@@ -1,0 +1,70 @@
+[WARN ] 2023-06-25 13:36:52.807 [JavaFX Application Thread] App - Tipo de usuario no válido
+[WARN ] 2023-06-25 13:36:56.034 [JavaFX Application Thread] App - Tipo de usuario no válido
+[WARN ] 2023-06-25 13:42:17.557 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[WARN ] 2023-06-25 16:44:11.350 [JavaFX Application Thread] App - Selecciona una columna con datos para poder modificar
+[WARN ] 2023-06-25 19:55:20.681 [JavaFX Application Thread] App - La clave del cuerpo académico debe seguir las siguientes características:
+1. Debe comenzar con los caracteres 'UV-' seguidos de 'CA-'.
+2. Después de 'CA-' debe contener 3 dígitos enteros.
+3. No pueden existir espacios antes, durante o al final de la clave del cuerpo academicoEjemplo válido: 'UV-CA-123'
+[WARN ] 2023-06-25 19:55:33.085 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[WARN ] 2023-06-25 19:55:34.237 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[WARN ] 2023-06-25 19:55:35.589 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[WARN ] 2023-06-25 19:55:36.635 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[WARN ] 2023-06-25 19:55:37.592 [JavaFX Application Thread] App - El nombre del cuerpo academico solo puede contener letras y un único espacio entre palabras
+[ERROR] 2023-06-25 19:58:47.869 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2023-06-25 19:58:49.954 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`cuerpoacademicoprofesor`, CONSTRAINT `claveCaProfesor` FOREIGN KEY (`clave_CA`) REFERENCES `cuerpoacademico` (`Clave`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:58:52.599 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2023-06-25 19:58:55.998 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`curso`, CONSTRAINT `Experiencia_Educativa` FOREIGN KEY (`Experiencia_Educativa`) REFERENCES `experienciaeducativa` (`ID_EE`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:03.589 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`curso`, CONSTRAINT `Experiencia_Educativa` FOREIGN KEY (`Experiencia_Educativa`) REFERENCES `experienciaeducativa` (`ID_EE`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:11.730 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`profesor`, CONSTRAINT `correo` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:12.765 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`sinodal`, CONSTRAINT `NumeroPersonalSinodal` FOREIGN KEY (`Num_personalSinodal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:15.499 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`profesor`, CONSTRAINT `correo` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:17.214 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`sinodal`, CONSTRAINT `NumeroPersonalSinodal` FOREIGN KEY (`Num_personalSinodal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:20.415 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`codirector`, CONSTRAINT `NumeroPersonalCodirector` FOREIGN KEY (`Num_personalCodirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:21.418 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`director`, CONSTRAINT `NumPersonalDirector` FOREIGN KEY (`Num_personalDirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:23.298 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`director`, CONSTRAINT `NumPersonalDirector` FOREIGN KEY (`Num_personalDirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:30.021 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`codirector`, CONSTRAINT `NumeroPersonalCodirector` FOREIGN KEY (`Num_personalCodirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:38.258 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`trabajorecepcional`, CONSTRAINT `idAnteproyecto` FOREIGN KEY (`ID_anteproyecto`) REFERENCES `anteproyecto` (`ID_Anteproyecto`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-25 19:59:42.425 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-25 19:59:43.445 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-25 20:34:17.446 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-25 20:34:18.487 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-26 02:23:09.728 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-26 02:35:05.708 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2023-06-26 02:35:07.607 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`cuerpoacademicoprofesor`, CONSTRAINT `claveCaProfesor` FOREIGN KEY (`clave_CA`) REFERENCES `cuerpoacademico` (`Clave`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:10.089 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2023-06-26 02:35:15.382 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`curso`, CONSTRAINT `Num_personal` FOREIGN KEY (`Num_personal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:30.898 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`anteproyecto`, CONSTRAINT `NpersonalDirector` FOREIGN KEY (`N_personalDirector`) REFERENCES `director` (`Num_personalDirector`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:35.005 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`sinodal`, CONSTRAINT `NumeroPersonalSinodal` FOREIGN KEY (`Num_personalSinodal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:39.138 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`profesor`, CONSTRAINT `correo` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:40.109 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`sinodal`, CONSTRAINT `NumeroPersonalSinodal` FOREIGN KEY (`Num_personalSinodal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:44.090 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`director`, CONSTRAINT `NumPersonalDirector` FOREIGN KEY (`Num_personalDirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:35:46.565 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`codirector`, CONSTRAINT `NumeroPersonalCodirector` FOREIGN KEY (`Num_personalCodirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:36:03.339 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`trabajorecepcional`, CONSTRAINT `idAnteproyecto` FOREIGN KEY (`ID_anteproyecto`) REFERENCES `anteproyecto` (`ID_Anteproyecto`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 02:36:21.315 [main] App - Duplicate entry 's21013678' for key 'estudiante.PRIMARY'
+[ERROR] 2023-06-26 02:36:23.362 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-26 02:36:24.311 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2023-06-26 09:28:07.981 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2023-06-26 09:28:09.982 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`cuerpoacademicoprofesor`, CONSTRAINT `claveCaProfesor` FOREIGN KEY (`clave_CA`) REFERENCES `cuerpoacademico` (`Clave`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 10:28:58.574 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`anteproyecto`, CONSTRAINT `NpersonalCodirector` FOREIGN KEY (`N_personalCodirector`) REFERENCES `codirector` (`Num_personalCodirector`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2023-06-26 10:32:04.995 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`anteproyecto`, CONSTRAINT `NpersonalDirector` FOREIGN KEY (`N_personalDirector`) REFERENCES `director` (`Num_personalDirector`) ON DELETE CASCADE ON UPDATE CASCADE)
+[WARN ] 2024-01-18 15:39:22.626 [JavaFX Application Thread] App - Error de conexión
+[WARN ] 2024-01-18 15:39:34.039 [JavaFX Application Thread] App - Error de conexión
+[WARN ] 2024-01-18 15:39:35.198 [JavaFX Application Thread] App - Error de conexión
+[WARN ] 2024-01-18 15:39:35.881 [JavaFX Application Thread] App - Error de conexión
+[ERROR] 2024-01-22 22:11:10.192 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2024-01-22 22:11:10.735 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`cuerpoacademicoprofesor`, CONSTRAINT `claveCaProfesor` FOREIGN KEY (`clave_CA`) REFERENCES `cuerpoacademico` (`Clave`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:11.121 [main] App - Duplicate entry 'UV-CA-534' for key 'cuerpoacademico.PRIMARY'
+[ERROR] 2024-01-22 22:11:11.643 [main] App - Duplicate entry '51342' for key 'curso.PRIMARY'
+[ERROR] 2024-01-22 22:11:12.465 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`anteproyecto`, CONSTRAINT `NpersonalDirector` FOREIGN KEY (`N_personalDirector`) REFERENCES `director` (`Num_personalDirector`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:12.951 [main] App - Duplicate entry '281' for key 'profesor.PRIMARY'
+[ERROR] 2024-01-22 22:11:13.282 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`profesor`, CONSTRAINT `correo` FOREIGN KEY (`correo`) REFERENCES `usuario` (`correo`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:13.558 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`sinodal`, CONSTRAINT `NumeroPersonalSinodal` FOREIGN KEY (`Num_personalSinodal`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:13.970 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`director`, CONSTRAINT `NumPersonalDirector` FOREIGN KEY (`Num_personalDirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:14.363 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`codirector`, CONSTRAINT `NumeroPersonalCodirector` FOREIGN KEY (`Num_personalCodirector`) REFERENCES `profesor` (`Num_personalProfesor`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:14.952 [main] App - Cannot add or update a child row: a foreign key constraint fails (`proyecto`.`trabajorecepcional`, CONSTRAINT `idAnteproyecto` FOREIGN KEY (`ID_anteproyecto`) REFERENCES `anteproyecto` (`ID_Anteproyecto`) ON DELETE CASCADE ON UPDATE CASCADE)
+[ERROR] 2024-01-22 22:11:15.434 [main] App - Duplicate entry 's21018345' for key 'estudiante.PRIMARY'
+[ERROR] 2024-01-22 22:11:15.741 [main] App - Duplicate entry 's21013678' for key 'estudiante.PRIMARY'
+[ERROR] 2024-01-22 22:11:16.146 [main] App - Duplicate entry 's21013678' for key 'estudiante.PRIMARY'
+[ERROR] 2024-01-22 22:11:16.479 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'
+[ERROR] 2024-01-22 22:11:16.738 [main] App - Duplicate entry 'JonathanHDZV@gmail.com' for key 'usuario.PRIMARY'

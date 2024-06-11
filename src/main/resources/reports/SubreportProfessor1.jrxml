@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 5.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubreportProfessor1" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6abd21bd-1ff7-49df-87d1-2499838e62c8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="proyecto"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="matricula" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT e.matricula, u.nombre, e.NRC_Curso, c.Periodo, p.Num_personalProfesor, p.Nombre_Profesor,
+ a.N_personalDirector, d.Nombre_Director, a.N_personalCodirector, cd.Nombre_Codirector
+FROM proyecto.estudiante e
+INNER JOIN proyecto.usuario u ON e.correo = u.correo
+INNER JOIN proyecto.curso c ON c.NRC = e.NRC_Curso
+INNER JOIN proyecto.anteproyecto a on a.ID_Anteproyecto = e.ID_anteproyecto
+INNER JOIN proyecto.profesor p on p.Num_personalProfesor = c.Num_personal 
+INNER JOIN proyecto.director d on a.N_personalDirector = d.Num_personalDirector
+INNER JOIN proyecto.codirector cd on a.N_personalCodirector = cd.Num_personalCodirector
+INNER JOIN proyecto.estudiante e2 ON e2.ID_anteproyecto = e.ID_anteproyecto AND e2.matricula != e.matricula
+INNER JOIN proyecto.usuario u2 ON e2.correo = u2.correo
+WHERE e.matricula =  $P{matricula}]]>
+	</queryString>
+	<field name="matricula" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Matricula"/>
+		<property name="com.jaspersoft.studio.field.label" value="matricula"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estudiante"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+	</field>
+	<field name="NRC_Curso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NRC_Curso"/>
+		<property name="com.jaspersoft.studio.field.label" value="NRC_Curso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estudiante"/>
+	</field>
+	<field name="Periodo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Periodo"/>
+		<property name="com.jaspersoft.studio.field.label" value="Periodo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="curso"/>
+	</field>
+	<field name="Num_personalProfesor" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Num_personalProfesor"/>
+		<property name="com.jaspersoft.studio.field.label" value="Num_personalProfesor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<field name="Nombre_Profesor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Profesor"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Profesor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<field name="N_personalDirector" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="N_personalDirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="N_personalDirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre_Director" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Director"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Director"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="director"/>
+	</field>
+	<field name="N_personalCodirector" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="N_personalCodirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="N_personalCodirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre_Codirector" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Codirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Codirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codirector"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="20" width="131" height="33" forecolor="#FFFFFF" backcolor="#006699" uuid="88fc443c-4512-48cc-8204-5ffe15fd2828"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre estudiante:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="132" y="20" width="148" height="33" forecolor="#FFFFFF" backcolor="#006699" uuid="d67f41e6-4e4b-4030-bce9-16f78190d791"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Num. personal profesor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="20" width="180" height="33" forecolor="#FFFFFF" backcolor="#006699" uuid="3f5f9efc-f5b2-401b-96a0-418ddd2bc290"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Equipos de trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="460" y="20" width="120" height="33" forecolor="#FFFFFF" backcolor="#006699" uuid="5884ee2b-313a-4cbf-9175-01e3f2534554"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="580" y="20" width="150" height="33" forecolor="#FFFFFF" backcolor="#006699" uuid="423911f8-66e2-4354-b778-d784d0004915"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Periodo]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="132" height="30" uuid="492a12d2-f3e1-4430-aabd-c483f9d6dab4"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{matricula} + " - " + $F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="148" height="30" uuid="c2403590-48fd-4cfe-b23d-a48c4dccd031"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Num_personalProfesor} + " - " + $F{Nombre_Profesor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="180" height="30" uuid="f2532257-1151-44e1-b7bc-4ecb5710d73c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{N_personalDirector} + " - " + $F{Nombre_Director} + "|" + $F{N_personalCodirector} + $F{Nombre_Codirector}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="120" height="30" uuid="64ede679-0a8f-4d59-a7a6-a57378baab45"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{NRC_Curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="0" width="150" height="30" uuid="956212d8-4905-47a8-b84e-b8488167e93c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Periodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

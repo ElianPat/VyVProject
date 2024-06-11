@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.HomeAcademicGroupController">
+   <children>
+      <TableView fx:id="tableViewPreliminaryProject" layoutX="145.0" layoutY="155.0" onMouseClicked="#selectedRow" prefHeight="200.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="columnPreliminaryProjectName" prefWidth="233.0" text="Titulo" />
+          <TableColumn fx:id="columnPreliminaryProjectState" prefWidth="100.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Label layoutX="215.0" layoutY="94.0" text="Anteproyectos Propuestos ">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="27.0" stroke="#0d0d0d" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="8.0" layoutY="23.0" stroke="#004aad" strokeType="INSIDE" width="600.0" />
+      <GridPane layoutX="7.0" layoutY="31.0" prefHeight="34.0" prefWidth="594.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="SGPGyER" textFill="#f1cb00" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelName" prefHeight="23.0" prefWidth="57.0" text="label" textAlignment="RIGHT" textFill="#eff3f4" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="198.0" layoutY="139.0" text="Selecciona uno para ver sus detalles: ">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageViewExit" fitHeight="24.0" fitWidth="68.0" layoutX="562.0" layoutY="2.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="455.0" layoutY="127.0" onMouseClicked="#updateTableOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconUpdateTable.png" />
+         </image>
+      </ImageView>
+   </children>
+   <padding>
+      <Insets right="5.0" />
+   </padding>
+</AnchorPane>

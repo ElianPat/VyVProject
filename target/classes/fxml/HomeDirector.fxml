@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="600.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.HomeDirectorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0d" height="40.0" layoutY="35.0" stroke="#0d0d0d" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="10.0" layoutY="25.0" stroke="#004aad" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="29.0" layoutY="43.0" text="SGPGyER" textFill="#f1cb00">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelName" layoutX="503.0" layoutY="46.0" prefHeight="17.0" prefWidth="72.0" text="Label" textFill="#f8f7f7">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+      </Label>
+      <MenuBar layoutX="59.0" layoutY="75.0" prefHeight="38.0" prefWidth="481.0" style="-fx-background-color: C6F3FA;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Crear">
+            <items>
+              <MenuItem fx:id="btnRegisterPreliminaryProject" mnemonicParsing="false" onAction="#registerPreliminaryProjectOnAction" text="Anteproyecto " />
+                  <MenuItem mnemonicParsing="false" onAction="#registerReceptionalWorkOnAction" text="Trabajo recepcional" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconCreate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Modificar">
+            <items>
+                  <MenuItem fx:id="btnModifyPreliminaryProject" mnemonicParsing="false" onAction="#modifyPreliminaryProjectOnAction" text="Anteproyecto " />
+                  <MenuItem mnemonicParsing="false" onAction="#modifyReceptionalWorkOnAction" text="Trabajo recepcional" />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconModify.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Asignar">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#assingPreliminaryProjectOnAction" text="Anteproyecto " />
+            </items>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconAssign.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Revisar avance">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showAdvanceOnAction" text="Avances" />
+              </items>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconCheckProgress.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reporte">
+              <items>
+                <MenuItem fx:id="btnGenerateReport" mnemonicParsing="false" onAction="#generateReportOnAction" text="Generar" />
+              </items>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconReport.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane fx:id="borderPane" layoutY="113.0" prefHeight="360.0" prefWidth="600.0" />
+      <ImageView fx:id="btnBack" fitHeight="24.0" fitWidth="84.0" layoutX="563.0" layoutY="2.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

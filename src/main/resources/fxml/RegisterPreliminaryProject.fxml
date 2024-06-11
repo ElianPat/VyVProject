@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.7" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.RegisterPreliminaryProjectController">
+   <children>
+      <ScrollPane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="600.0" vvalue="0.02">
+         <content>
+            <AnchorPane prefHeight="1100.0" prefWidth="582.0" style="-fx-background-color: C6F3FA;">
+               <children>
+                  <TextField fx:id="textFieldProjectName" layoutX="99.0" layoutY="59.0" prefHeight="25.0" prefWidth="450.0" promptText="Nombre" style="-fx-border-color: #004aad; -fx-background-color: C6F3FA;" />
+                  <Label layoutX="36.0" layoutY="65.0" text="Nombre: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="100.0" text="Resultados esperados: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaObjective" layoutX="33.0" layoutY="125.0" prefHeight="69.0" prefWidth="521.0" promptText="Resultados esperados" style="-fx-background-color: #004aad;" />
+                  <Label layoutX="33.0" layoutY="202.0" text="Descripcion: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaDescription" layoutX="32.0" layoutY="226.0" prefHeight="118.0" prefWidth="523.0" promptText="Descripción" style="-fx-background-color: #004aad;" />
+                  <Label layoutX="30.0" layoutY="364.0" text="Linea de investigacion: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldLineOfResearch" layoutX="163.0" layoutY="358.0" prefHeight="28.0" prefWidth="392.0" promptText="Línea de investigación" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <Label layoutX="32.0" layoutY="394.0" text="Requisitos del estudiante: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaStudentRequirements" layoutX="29.0" layoutY="417.0" prefHeight="109.0" prefWidth="524.0" promptText="Requisitos del estudiante" style="-fx-background-color: #004aad;" />
+                  <Label layoutX="30.0" layoutY="535.0" text="Bibliografia recomendada: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaRecommendedBibliography" layoutX="29.0" layoutY="558.0" prefHeight="117.0" prefWidth="523.0" promptText="Bibliografía recomendada" style="-fx-background-color: #004aad;" />
+                  <Label layoutX="256.0" layoutY="696.0" text="Cupo: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="696.0" text="Codirector: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxQuota" layoutX="300.0" layoutY="690.0" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <ComboBox fx:id="comboBoxCodirector" layoutX="96.0" layoutY="690.0" prefHeight="28.0" prefWidth="153.0" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <Label layoutX="378.0" layoutY="696.0" text="Duracion: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxDuration" layoutX="447.0" layoutY="690.0" prefHeight="28.0" prefWidth="59.0" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <Label layoutX="514.0" layoutY="696.0" text="meses">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="39.0" layoutY="740.0" text="C. Academico: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxAcademicGroup" layoutX="130.0" layoutY="734.0" prefHeight="28.0" prefWidth="415.0" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <Label layoutX="51.0" layoutY="788.0" text="LGAC: ">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxLgac" layoutX="129.0" layoutY="782.0" prefHeight="28.0" prefWidth="415.0" promptText="LGAC" style="-fx-background-color: C6F3FA; -fx-border-color: #004aad;" />
+                  <Label layoutX="34.0" layoutY="826.0" text="Notas:">
+                     <font>
+                        <Font name="Cambria Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textAreaNotes" layoutX="30.0" layoutY="851.0" prefHeight="99.0" prefWidth="527.0" promptText="Notas" style="-fx-background-color: #004aad;" />
+                  <Label layoutX="231.0" layoutY="22.0" text="Crear anteproyecto">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonCreate" layoutX="226.0" layoutY="972.0" mnemonicParsing="false" onAction="#createOnAction" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: #FAB237;" text="Crear">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

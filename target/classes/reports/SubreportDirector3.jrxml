@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 5.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubreportDirector3" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d110ef31-f264-4526-9d6d-3f255c4ee230">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="proyecto"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="matricula" class="java.lang.String"/>
+	<parameter name="anteproyecto" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT a.`Nombre_An`,
+	u.`Nombre`,
+	COUNT( av.num_avance) AS Total_Avances_Entregados,
+	GROUP_CONCAT( av.titulo) AS Lista_Avances
+FROM proyecto.anteproyecto a
+	INNER JOIN proyecto.estudiante e ON 
+	 e.`ID_anteproyecto` = a.`ID_Anteproyecto` 
+	INNER JOIN proyecto.usuario u ON 
+	 u.correo = e.correo 
+	LEFT JOIN proyecto.estudianteavance ea ON 
+	 ea.`Matricula_estudiante` = e.`Matricula` 
+	LEFT JOIN proyecto.avance av ON 
+	 av.num_avance = ea.numero_avance 
+WHERE 
+	 e.`Matricula` = $P{matricula} 
+	 OR a.`Nombre_An` = $P{anteproyecto} 
+GROUP BY a.`Nombre_An`,
+	u.`Nombre`]]>
+	</queryString>
+	<field name="Nombre_An" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+	</field>
+	<field name="Total_Avances_Entregados" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="Total_Avances_Entregados"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total_Avances_Entregados"/>
+	</field>
+	<field name="Lista_Avances" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Lista_Avances"/>
+		<property name="com.jaspersoft.studio.field.label" value="Lista_Avances"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="280" height="30" uuid="6e08c2c4-5a19-4404-b46a-03aa6b9a78cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Anteproyecto: " + $F{Nombre_An}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="30" width="760" height="10" backcolor="#006699" uuid="8447702f-d5b7-45e6-ad58-a6a4ffcb9849"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="82" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="180" height="30" uuid="ac598938-f336-4540-b7d0-43bdc7be315c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88701eba-9e85-4187-a9f1-7f5e2bb8ed5e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="30" width="180" height="30" uuid="9e6f54a0-073c-46ab-b7a5-6a721fb3a650">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5caca1ab-a66e-4346-9e19-0e3dbfbe77fe"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total de avances: " + $F{Total_Avances_Entregados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="30" width="400" height="30" uuid="d4db3dc7-e235-4e0c-9d2f-e3f5098f7bd1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61b4ad82-e5b4-4f61-8346-bcc05ef6dcc8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Lista_Avances}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="80" width="760" height="2" backcolor="#006699" uuid="a998d258-734a-4d7c-89be-5129394399dc"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="760" height="2" backcolor="#006699" uuid="4d79a99f-284c-4bb8-b6ff-09a9e8d19983"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>

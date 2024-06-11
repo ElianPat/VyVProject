@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
+    <Appenders>
+        <SMTP name="SMTP"  bufferSize="1064"
+              subject="Error. Mensaje de Alejandro Sánchez Marín"
+              to="alexsandermarin@outlook.com"
+              from="alegz.20073@gmail.com"
+              smtpUsername="alegz.20073@gmail.com"
+              smtpPassword="htonzopzhrfbdnkf"
+              smtpHost="smtp.gmail.com."
+              smtpPort="587"
+              smtpProtocol="smtp"
+              smtpDebug="true"       
+        >
+            <PatternLayout pattern="%d [%t] %-5p %c - %m%n" />
+        </SMTP>
+        <RollingFile name="fileLogger" fileName="${basePath}/app.log"
+                            filePattern="${basePath}/app-%i.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${basePath}" maxDepth="10">
+                    <IfAccumulatedFileSize exceeds="10MB" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="SMTP" />
+            <AppenderRef ref="fileLogger" />
+        </Root>
+    </Loggers>
+</Configuration>

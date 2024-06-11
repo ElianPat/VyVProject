@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 5.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DirectorReport" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="117473f5-b461-46f5-8259-35dbfe13232f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="proyecto"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="matricula" class="java.lang.String"/>
+	<parameter name="anteproyecto" class="java.lang.String"/>
+	<parameter name="logoSGPG" class="java.io.InputStream"/>
+	<parameter name="logoUV" class="java.io.InputStream"/>
+	<parameter name="subreporte1" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subreporte2" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subreporte3" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[SELECT a.`Nombre_An`,
+	u.`Nombre`,
+	COUNT( av.num_avance) AS Total_Avances_Entregados,
+	GROUP_CONCAT( av.titulo) AS Lista_Avances
+FROM proyecto.anteproyecto a
+	INNER JOIN proyecto.estudiante e ON 
+	 e.`ID_anteproyecto` = a.`ID_Anteproyecto` 
+	INNER JOIN proyecto.usuario u ON 
+	 u.correo = e.correo 
+	LEFT JOIN proyecto.estudianteavance ea ON 
+	 ea.`Matricula_estudiante` = e.`Matricula` 
+	LEFT JOIN proyecto.avance av ON 
+	 av.num_avance = ea.numero_avance 
+WHERE 
+	 e.`Matricula` = $P{matricula} 
+	 OR a.`Nombre_An` = $P{anteproyecto} 
+GROUP BY a.`Nombre_An`,
+	u.`Nombre`]]>
+	</queryString>
+	<field name="Nombre_An" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_An"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+	</field>
+	<field name="Total_Avances_Entregados" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="Total_Avances_Entregados"/>
+		<property name="com.jaspersoft.studio.field.label" value="Total_Avances_Entregados"/>
+	</field>
+	<field name="Lista_Avances" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Lista_Avances"/>
+		<property name="com.jaspersoft.studio.field.label" value="Lista_Avances"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="-20" width="842" height="90" backcolor="#006699" uuid="d0f2a570-d61e-412e-a94d-e3dfd312c68c"/>
+			</rectangle>
+			<image onErrorType="Blank">
+				<reportElement key="" x="10" y="-10" width="95" height="70" uuid="39ff6b7f-2fae-4b65-ad39-14bebe9b315f"/>
+				<imageExpression><![CDATA[$P{logoSGPG}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="246" y="5" width="311" height="40" forecolor="#FFFFFF" uuid="3e4de23e-88b6-4bf2-a45a-81389ee2b7f5"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Director]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="210" splitType="Stretch">
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="800" height="210" isRemoveLineWhenBlank="true" uuid="05da204a-d539-43f3-8630-56a65d21445c">
+					<printWhenExpression><![CDATA[$P{matricula} != null && $P{anteproyecto} == null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="matricula">
+					<subreportParameterExpression><![CDATA[$P{matricula}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte1}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="800" height="210" isRemoveLineWhenBlank="true" uuid="b99fb1b9-d70e-4246-9a49-cf585b2c7ab4">
+					<printWhenExpression><![CDATA[$P{matricula} == null && $P{anteproyecto} != null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="anteproyecto">
+					<subreportParameterExpression><![CDATA[$P{anteproyecto}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte2}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="800" height="210" isRemoveLineWhenBlank="true" uuid="27d9522b-ee81-40ed-adf3-6985f6713e92">
+					<printWhenExpression><![CDATA[$P{matricula} != null && $P{anteproyecto} != null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="matricula">
+					<subreportParameterExpression><![CDATA[$P{matricula}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="anteproyecto">
+					<subreportParameterExpression><![CDATA[$P{anteproyecto}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte3}]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="130" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="100" width="715" height="30" uuid="c9e2e855-3323-4d9c-9d01-dc5c4adf29a7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="740" y="70" width="60" height="60" uuid="8199c64b-4ade-484a-942a-29672024fbff">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logoUV}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

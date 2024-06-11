@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 5.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProfessorReport" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7dc1d684-72c6-4a35-8670-a0a22f4ba9e6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="proyecto"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="matricula" class="java.lang.String"/>
+	<parameter name="nrc" class="java.lang.String"/>
+	<parameter name="subreporte1" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subreporte2" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subreporte3" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="logoSGPG" class="java.io.InputStream"/>
+	<parameter name="logoUV" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT e.matricula, u.nombre, e.NRC_Curso, c.Periodo, p.Num_personalProfesor, p.Nombre_Profesor,
+ a.N_personalDirector, d.Nombre_Director, a.N_personalCodirector, cd.Nombre_Codirector
+FROM proyecto.estudiante e
+INNER JOIN proyecto.usuario u ON e.correo = u.correo
+INNER JOIN proyecto.curso c ON c.NRC = e.NRC_Curso
+INNER JOIN proyecto.anteproyecto a on a.ID_Anteproyecto = e.ID_anteproyecto
+INNER JOIN proyecto.profesor p on p.Num_personalProfesor = c.Num_personal 
+INNER JOIN proyecto.director d on a.N_personalDirector = d.Num_personalDirector
+INNER JOIN proyecto.codirector cd on a.N_personalCodirector = cd.Num_personalCodirector
+INNER JOIN proyecto.estudiante e2 ON e2.ID_anteproyecto = e.ID_anteproyecto AND e2.matricula != e.matricula
+INNER JOIN proyecto.usuario u2 ON e2.correo = u2.correo
+WHERE e.matricula =  $P{matricula}  OR c.NRC =  $P{nrc}]]>
+	</queryString>
+	<field name="matricula" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Matricula"/>
+		<property name="com.jaspersoft.studio.field.label" value="matricula"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estudiante"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuario"/>
+	</field>
+	<field name="NRC_Curso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NRC_Curso"/>
+		<property name="com.jaspersoft.studio.field.label" value="NRC_Curso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estudiante"/>
+	</field>
+	<field name="Periodo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Periodo"/>
+		<property name="com.jaspersoft.studio.field.label" value="Periodo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="curso"/>
+	</field>
+	<field name="Num_personalProfesor" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Num_personalProfesor"/>
+		<property name="com.jaspersoft.studio.field.label" value="Num_personalProfesor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<field name="Nombre_Profesor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Profesor"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Profesor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<field name="N_personalDirector" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="N_personalDirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="N_personalDirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre_Director" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Director"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Director"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="director"/>
+	</field>
+	<field name="N_personalCodirector" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="N_personalCodirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="N_personalCodirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="anteproyecto"/>
+	</field>
+	<field name="Nombre_Codirector" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre_Codirector"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre_Codirector"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codirector"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="-20" width="842" height="90" backcolor="#006699" uuid="dba8c10c-b985-4420-975a-8d724b62e3ce"/>
+			</rectangle>
+			<image onErrorType="Blank">
+				<reportElement key="" x="10" y="-10" width="95" height="70" uuid="923ed935-403f-40a6-91a5-4fa6a47a0fb0"/>
+				<imageExpression><![CDATA[$P{logoSGPG}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="246" y="5" width="311" height="40" forecolor="#FFFFFF" uuid="b5230d0c-e1d4-4092-aa14-b8355054edb1"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Profesor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="200" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="800" height="200" uuid="959de256-e23e-4fa8-b3ae-9b26c2554255">
+					<printWhenExpression><![CDATA[$P{matricula} != null && $P{nrc}  == null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="matricula">
+					<subreportParameterExpression><![CDATA[$P{matricula}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte1}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="0" y="0" width="800" height="200" uuid="b3054401-6e23-45cd-bcc1-3428cdf85f9a">
+					<printWhenExpression><![CDATA[$P{matricula} == null && $P{nrc}  != null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="nrc">
+					<subreportParameterExpression><![CDATA[$P{nrc}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte2}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="0" y="0" width="800" height="200" uuid="b38fa377-8a66-4534-8158-c6a4c32463ef">
+					<printWhenExpression><![CDATA[$P{matricula} != null && $P{nrc}  != null]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="matricula">
+					<subreportParameterExpression><![CDATA[$P{matricula}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nrc">
+					<subreportParameterExpression><![CDATA[$P{nrc}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreporte3}]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="130" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="100" width="715" height="30" uuid="a40db3be-f330-4932-b434-a98e80639ef7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="740" y="70" width="60" height="60" uuid="ae4a6c61-0f71-4c1c-a6ef-6284184959f1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logoUV}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,5 @@
+module:com.mycompany.sgpgyer
+mx.uv.fei.dataaccess
+mx.uv.fei.gui.controller
+mx.uv.fei.interfaces
+mx.uv.fei.logic

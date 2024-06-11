@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="601.0" style="-fx-background-color: C6F3FA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.ModifyAdvanceController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#004aad" height="9.0" layoutX="3.0" layoutY="31.0" stroke="#0b5569" strokeType="INSIDE" width="600.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#030303" height="44.0" layoutX="3.0" layoutY="40.0" stroke="#151515" strokeType="INSIDE" width="600.0" />
+        <Label layoutX="22.0" layoutY="51.0" text="SGPyER" textFill="#f1cb00">
+            <font>
+                <Font name="Berlin Sans FB" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelEducativeExperience" layoutX="259.0" layoutY="54.0" text="Label" textFill="#f2f5f7">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelName" layoutX="468.0" layoutY="54.0" text="Label" textFill="#f5f7fa">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTitle" layoutX="90.0" layoutY="103.0" text="titulo" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelDateStart" layoutX="91.0" layoutY="130.0" text="inicia" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelEndDate" layoutX="89.0" layoutY="158.0" text="vence" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTime" layoutX="212.0" layoutY="158.0" text="hora" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Line endX="383.0" endY="1.52587890625E-5" layoutX="156.0" layoutY="185.0" startX="-100.0" stroke="#042b50" />
+        <Line endX="383.0" endY="1.52587890625E-5" layoutX="156.0" layoutY="294.0" startX="-100.0" stroke="#042b50" />
+        <Label fx:id="labelArchivo" layoutX="63.0" layoutY="342.0" prefHeight="17.0" prefWidth="221.0" />
+        <Button fx:id="buttonReplace" layoutX="411.0" layoutY="337.0" mnemonicParsing="false" onAction="#replaceOnAction" style="-fx-background-color: f1cb00;" text="Sustituir Archivo" textFill="#181819">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </Button>
+        <Button fx:id="btnModify" layoutX="380.0" layoutY="385.0" mnemonicParsing="false" onAction="#modifyAdvanceOnAction" style="-fx-background-color: f1cb00;" text="Modificar descripción" textFill="#181819">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></Button>
+        <TextArea fx:id="textAreaDescription" layoutX="56.0" layoutY="193.0" prefHeight="93.0" prefWidth="484.0" style="-fx-background-color: aad6cd;" />
+        <Label layoutX="56.0" layoutY="294.0" text="Archivo adjunto (Tamaño máximo: 10MB)" textFill="#0b5569">
+            <font>
+                <Font name="Berlin Sans FB" size="10.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTitle1" layoutX="56.0" layoutY="103.0" text="titulo" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelDateStart1" layoutX="57.0" layoutY="130.0" text="inicia" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelEndDate1" layoutX="55.0" layoutY="158.0" text="vence" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTime1" layoutX="175.0" layoutY="158.0" text="hora" textAlignment="CENTER" textFill="#042b50">
+            <font>
+                <Font name="Berlin Sans FB" size="13.0" />
+            </font>
+        </Label>
+        <ListView fx:id="listViewEvidence" layoutX="55.0" layoutY="308.0" onMouseClicked="#selectedEvidence" prefHeight="128.0" prefWidth="253.0" style="-fx-background-color: add6cd;" />
+        <Pane fx:id="paneMessage" layoutX="55.0" layoutY="308.0" prefHeight="128.0" prefWidth="253.0" style="-fx-background-color: aad6cd;">
+            <children>
+                <ImageView fitHeight="107.0" fitWidth="108.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Icon%20File%20not%20found.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#042b50" layoutX="115.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La entrega carece de archivos adjuntos" wrappingWidth="133.0">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <ImageView fx:id="btnExit" fitHeight="37.0" fitWidth="33.0" layoutX="572.0" layoutY="-2.0" onMouseClicked="#exitOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8-cerrar-ventana-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+    </children>
+</AnchorPane>
